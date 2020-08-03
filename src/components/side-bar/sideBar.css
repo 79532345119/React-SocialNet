@@ -1,0 +1,17 @@
+.sideBar {
+    grid-area: sideBar;
+    background-color: coral;
+}
+.sideBar__item {
+    padding: 5px;
+}
+
+.sideBar__item a {
+    color: white;
+    text-decoration: none;
+}
+.sideBar__item a.active {
+    color: yellow;
+    font-weight: 700;
+    
+}
