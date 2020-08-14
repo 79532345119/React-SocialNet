@@ -2,3 +2,7 @@
     grid-area: content;
   
   }
+
+.mainImg img {
+  height: 600px;
+}

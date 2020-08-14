@@ -1,0 +1,13 @@
+.myProfileInfo {
+    display: grid;
+    grid-template-columns: 20% 30%;
+    grid-gap: 1em;
+    }
+
+.myProfileInfo img {
+        grid-row: 1/6;
+        }
+
+.userName, .userAge {
+    font-size: 30px;
+}
