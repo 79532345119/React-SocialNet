@@ -1,6 +1,6 @@
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import store from './data/state';
+import store from './data/redux-store';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -10,7 +10,7 @@ import App from './App';
 let rerenderEntireTree = ({state}) => {
   ReactDOM.render(
     <React.StrictMode>
-      <App state={store.getState()} dispatch={store.dispatch.bind(store)}/>
+      <App store={store}/>
     </React.StrictMode>,
     document.getElementById('root')
   )
@@ -19,6 +19,9 @@ let rerenderEntireTree = ({state}) => {
 
 
 rerenderEntireTree(store.getState());
-store.subscribe(rerenderEntireTree);
+store.subscribe(() => {
+  let state = store.getState();
+  rerenderEntireTree(state);
+});
 
 serviceWorker.unregister();

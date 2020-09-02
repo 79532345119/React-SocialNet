@@ -1,26 +1,23 @@
 import React from 'react';
 import './myPosts.css'
 import Post from './post/post';
-import {addPostActionCreator} from './../../../../data/state';
-import {updateNewPostActionCreator} from './../../../../data/state';
+
+
 
 
 const MyPosts = (props)=> {
-
-
 
     let posts = props.posts.map(post=><Post message={post.message} like={post.likesCount}/>)
     
     let newPostElement = React.createRef();
 
-   let addPost = () => {
-        
-        props.dispatch(addPostActionCreator());
-        }
+   let onAddPost = () => {
+        props.addPost();
+    }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.dispatch(updateNewPostActionCreator(text));
+        props.updateNewPostText(text);
     }
 
     return (
@@ -30,7 +27,7 @@ const MyPosts = (props)=> {
                 <div><textarea onChange = {onPostChange} 
                                ref = {newPostElement}
                                value = {props.newPostText}></textarea></div>
-                <div><button onClick={addPost}>ADD POST</button></div>
+                <div><button onClick={onAddPost}>ADD POST</button></div>
             </div>
        
             <div className="newPost">

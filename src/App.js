@@ -9,9 +9,10 @@ import Music from './components/pages/music/music';
 import Settings from './components/pages/settings/settings';
 
 import {Route, BrowserRouter} from 'react-router-dom';
+import MessagesContainer from './components/pages/messages/messagesContainer';
 
-function App(props) {
-       
+const App = (props) => {
+     
   return (
          
     <BrowserRouter>
@@ -20,13 +21,12 @@ function App(props) {
           <SideBar/>
           <Route path="/profile" 
                  render={()=><Profile 
-                     profilePage={props.state.profilePage}
-                     dispatch = {props.dispatch}
+                     store={props.store}
                      />}/>
           <Route path="/messages" 
-                 render={()=><Messages 
-                    dialogs={props.state.messagesPage.dialogs} 
-                    messages={props.state.messagesPage.messages}/>}/>
+                 render={()=><MessagesContainer 
+                    store={props.store} 
+                    />}/>
           <Route path="/news" 
                  component={News}/>
           <Route path="/music" 
