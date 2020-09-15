@@ -18,6 +18,9 @@ const SideBar = ()=> {
             <div className="sideBar__item">
                 <NavLink to="settings">Settings</NavLink>
             </div>
+            <div className="sideBar__item">
+                <NavLink to="/users">Users</NavLink>
+            </div>
         </nav>
     )
 }

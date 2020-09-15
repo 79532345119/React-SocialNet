@@ -1,0 +1,7 @@
+.users {
+    display: grid;
+}
+
+.userPhoto {
+    width: 50px;
+}
