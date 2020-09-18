@@ -5,3 +5,12 @@
 .userPhoto {
     width: 50px;
 }
+
+.selectedPage {
+    font-weight: 700;
+    margin: 1rem;
+}
+
+.currentPage {
+    margin: 1rem;
+}

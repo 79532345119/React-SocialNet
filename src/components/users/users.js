@@ -5,8 +5,10 @@ import * as axios from 'axios';
 class Users extends React.Component {
 
     getUsers = ()=>{
-        axios.get('https://social-network.samuraijs.com/api/1.0/users')
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
+        //https://social-network.samuraijs.com/api/1.0/users?page=99&count=2
         .then(response => {this.props.setUsers(response.data.items);
+                           this.props.setTotalUsersQuantity(response.data.totalCount);          
         })
 /*         if (this.props.users.length === 0) {
             this.props.setUsers([
@@ -18,17 +20,42 @@ class Users extends React.Component {
     }
 
     componentDidMount() {
-        this.getUsers()
+        this.getUsers();
+    }
+
+    onPageChanged = (pageNumber) => {
+        this.props.setCurrentPage(pageNumber);
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`)
+        .then(response => {
+            this.getUsers();
+            this.props.setTotalUsersQuantity(response.data.totalCount);
+        })
     }
    
     render() {
 
+        let pagesQuantity = Math.ceil(this.props.totalUsersQuantity / this.props.pageSize);
+        let pages = [];
+        for (let i=1; i<=pagesQuantity; i++) {
+            pages.push(i);
+        }
+       
+
          return <div className='users'>
+            <div>
+                {pages.map(p => {
+                    return <span className={(this.props.currentPage === p)? 'selectedPage' : 'currentPage'}
+                    
+                    onClick={(e)=> { this.onPageChanged(p) } }
+                    >{p}</span>
+                })
+                }
+            </div>
         {
             this.props.users.map( u=> <div key={u.id}>
                 <span>
                     <div>
-                        <img src={u.photoUrl} className='userPhoto' alt='аватарка пользователя'/>
+                        <img src={u.photos.large || u.photos.small || 'https://shapka-youtube.ru/wp-content/uploads/2018/10/spartan.png'} className='userPhoto' alt='аватарка пользователя'/>
                     </div>
                     <div>
                         {u.followed 
