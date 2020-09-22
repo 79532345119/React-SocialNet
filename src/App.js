@@ -4,7 +4,7 @@ import {Route} from 'react-router-dom';
 import './App.css';
 import Header from './components/header/header';
 import SideBar from './components/side-bar/sideBar';
-import Profile from './components/pages/profile/profile';
+import ProfileContainer from './components/pages/profile/profileContainer';
 import MessagesContainer from './components/pages/messages/messagesContainer';
 import News from './components/pages/news/news';
 import Music from './components/pages/music/music';
@@ -20,7 +20,7 @@ const App = (props) => {
           <Header/>
           <SideBar/>
           <Route path="/profile" 
-                 render={()=><Profile 
+                 render={()=><ProfileContainer 
                      store={props.store}
                      />}/>
           <Route path="/messages" 
