@@ -1,16 +1,15 @@
 .profileInfo {
     display: grid;
     justify-items: justify;
-
     grid-template-columns: 1fr 2fr;
+    grid-auto-rows: minmax(6rem, auto);
+    background-color: palegoldenrod;
     }
 
     .userPhoto {
 
         grid-row: 1/3;
         }
-
-
 
     .userAboutItemName {
         font-weight: 700;
