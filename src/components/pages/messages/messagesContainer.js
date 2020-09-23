@@ -1,4 +1,3 @@
-import React from 'react';
 import './messages.css'
 import Messages from './messages';
 import { sendMessageActionCreator, updateNewMessageBodyActionCreator } from '../../../data/dialogs-reducer';

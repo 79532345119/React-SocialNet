@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { usersAPI } from '../../api/api';
 import './users.css';
 
 
@@ -29,8 +30,18 @@ let Users = (props) => {
             </div>
             <div>
                 {u.followed 
-                    ? <button onClick={()=>{props.unfollow(u.id)}}>Unfollow</button> 
-                    : <button onClick={()=>{props.follow(u.id)}}>Follow</button>}
+                    ? <button onClick={()=>{
+                        usersAPI.unfollowUser(u.id)
+                            .then(data => {
+                                    if (data.resultCode === 0) {props.unfollow(u.id)}
+                                })
+                        }}>Unfollow</button> 
+                    : <button onClick={()=>{
+                        usersAPI.followUser(u.id)
+                                .then(data => {
+                                    if (data.resultCode === 0) {props.follow(u.id)}
+                                })
+                        }}>Follow</button>}
             </div>
         </span>
         <span>
