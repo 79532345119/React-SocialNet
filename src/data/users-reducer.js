@@ -1,4 +1,6 @@
 
+import {usersAPI} from '../api/api';
+
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SETUSERS = 'SETUSERS';
@@ -7,14 +9,15 @@ const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 const TOGGLE_IS_FOLLOWING_IN_PROGRESS = 'TOGGLE_IS_FOLLOWING_IN_PROGRESS';
 
+
 let initialState = {
     users: [],
-    pageSize: 5,
+    pageSize: 10,
     totalUsersQuantity: 0,
     currentPage: 1,
     isFetching: true,
-    isFollowingInProgress: []
-};
+    isFollowingInProgress: [],
+    };
 
 const usersReducer = (state = initialState, action) => {
     switch(action.type) {
@@ -56,6 +59,7 @@ const usersReducer = (state = initialState, action) => {
                 ? [...state.isFollowingInProgress, action.userId]
                 : state.isFollowingInProgress.filter(id => id != action.userId) }
         }
+
         default:
             return state;
     }
@@ -74,5 +78,18 @@ export const setTotalUsersQuantity = (totalUsersQuantity) => ({type: SET_TOTAL_U
 export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching})
 
 export const toggleIsFollowingInProgress = (isFetching, userId) =>({type: TOGGLE_IS_FOLLOWING_IN_PROGRESS, isFetching, userId})
+
+export const getUsers = (currentPage, pageSize) => {
+    return (dispatch) => {
+        dispatch(toggleIsFetching(true));
+
+        usersAPI.getUsers(currentPage, pageSize)
+            .then(data => {
+                dispatch(toggleIsFetching(false));
+                dispatch(setUsers(data.items));
+                dispatch(setTotalUsersQuantity(data.totalCount));
+            })
+    }
+}
 
 export default usersReducer;

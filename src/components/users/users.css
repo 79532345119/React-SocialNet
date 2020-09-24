@@ -1,6 +1,11 @@
 .users {
     grid-area: content;
     display: grid;
+    grid-gap: 0.5em;
+    width: 1200px;
+}
+.usersQuantity {
+    width: 1200px;
 }
 
 .userPhoto {
@@ -14,4 +19,16 @@
 
 .currentPage {
     margin: 1rem;
+}
+
+.userName {
+    font-size: 1rem;
+    font-weight: 700;
+}
+.userField {
+    background-color: wheat;
+    display: grid;
+    justify-items: start;
+    grid-template-columns: 1fr 10fr;
+    margin-right: 5rem;
 }
