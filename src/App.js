@@ -10,6 +10,7 @@ import News from './components/pages/news/news';
 import Music from './components/pages/music/music';
 import Settings from './components/pages/settings/settings';
 import UsersContainer from './components/users/usersContainer';
+import Login from './components/login/login';
 
 
 const App = (props) => {
@@ -37,6 +38,8 @@ const App = (props) => {
                  render = {()=><UsersContainer
                      store={props.store}
                      />}/>
+          <Route path="/login"
+                 component={Login}/>
 
       </div> 
   );

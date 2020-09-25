@@ -21,6 +21,9 @@ const SideBar = ()=> {
             <div className="sideBar__item">
                 <NavLink to="/users">Users</NavLink>
             </div>
+            <div className="sideBar__item">
+                <NavLink to="/login">Login</NavLink>
+            </div>
         </nav>
     )
 }
