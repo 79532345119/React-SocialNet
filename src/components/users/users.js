@@ -59,6 +59,7 @@ let Users = (props) => {
         <div>
             <div className='userName'>{u.name}</div>
             <div>{u.status ? u.status : 'too lazy to add status'}</div>
+            <div>user ID {u.id}</div>
         </div>
     </div> )
 }
