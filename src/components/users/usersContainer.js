@@ -40,7 +40,6 @@ class UsersContainer extends React.Component {
             unfollow = {this.props.unfollow}
             follow = {this.props.follow}
             users = {this.props.users}
-            toggleIsFollowingInProgress = {this.props.toggleIsFollowingInProgress}
             isFollowingInProgress = {this.props.isFollowingInProgress}
             />
         </div>

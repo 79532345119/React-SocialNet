@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { usersAPI } from '../../api/api';
 import './users.css';
 
 
@@ -35,23 +34,25 @@ let Users = (props) => {
             </div>
             <div>
                 {u.followed 
-                    ? <button disabled={props.isFollowingInProgress.some(id => id ===u.id)} onClick={()=>{
-                        props.toggleIsFollowingInProgress(true, u.id)
+                    ? <button disabled={props.isFollowingInProgress.some(id => id ===u.id)} 
+                        onClick={()=>{
+                            props.unfollow(u.id)
+/*                        props.toggleIsFollowingInProgress(true, u.id)
                         usersAPI.unfollowUser(u.id)
                             .then(data => {
                                     if (data.resultCode === 0) {props.unfollow(u.id)};
                                     props.toggleIsFollowingInProgress(false, u.id);
-                                    
-                                })
+                                })  */
                         }}>Unfollow</button> 
-                    : <button disabled={                      
-                        props.isFollowingInProgress.some(id => id ===u.id)} onClick={()=>{
-                        props.toggleIsFollowingInProgress(true, u.id)
+                    : <button disabled={props.isFollowingInProgress.some(id => id ===u.id)} 
+                        onClick={()=>{
+                            props.follow(u.id)
+/*                        props.toggleIsFollowingInProgress(true, u.id)
                         usersAPI.followUser(u.id)
                                 .then(data => {
                                     if (data.resultCode === 0) {props.follow(u.id)};
                                     props.toggleIsFollowingInProgress(false, u.id)
-                                })
+                                }) */
                         }}>Follow</button>}
             </div>
         </div>
