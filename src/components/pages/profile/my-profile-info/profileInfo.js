@@ -1,6 +1,7 @@
 import React from 'react';
 import './profileInfo.css';
 import Preloader from '../../../common/preloader/preloader';
+import ProfileStatus from './profileStatus';
 
 
 
@@ -22,6 +23,7 @@ const ProfileInfo = (props)=>{
             <div className="userAboutItem">{props.profile.lookingForAJob ? 'Looling for a job' : '' }</div>
             <div className="userAboutItem">{props.profile.lookingForAJobDescription}</div>
         </div>
+        <ProfileStatus status = {props.status} updateStatus = {props.updateStatus}/>
         <ul className="userContacts"> Contacts:
             <li className="userContactsItem">facebook: {contacts.facebook}</li>
             <li className="userContactsItem">website: {contacts.website}</li>
