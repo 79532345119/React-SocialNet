@@ -19,8 +19,34 @@ const AddNewPostForm = (props) => {
 
 const AddNewPostFormRedux = reduxForm({form: 'ProfileAddNewPostForm'})(AddNewPostForm)
 
-const MyPosts = (props)=> {
+/* class MyPosts extends PureComponent { - сразу включает в себя метод shpuldComponentUpdate()
 
+   
+    render() {
+           
+        console.log('render')
+    let posts = this.props.posts.map(post=><Post key={post.id} message={post.message} like={post.likesCount}/>)
+    
+    const onAddPost = (values) => {
+        this.props.addPost(values.newPostText)
+    }
+    
+    return (
+        <div>
+            <h3>My posts</h3>
+            <AddNewPostFormRedux onSubmit={onAddPost}/>
+       
+            <div className="newPost">
+                {posts}
+            </div>
+        </div>
+    
+    )
+}
+} */
+
+const MyPosts = (props) => {
+    console.log('render')
     let posts = props.posts.map(post=><Post key={post.id} message={post.message} like={post.likesCount}/>)
     
     const onAddPost = (values) => {
@@ -39,6 +65,7 @@ const MyPosts = (props)=> {
     
     )
 }
+
 
 
 export default MyPosts;
