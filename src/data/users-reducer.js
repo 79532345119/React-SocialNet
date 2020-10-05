@@ -1,5 +1,6 @@
 
 import {usersAPI} from '../api/api';
+import {updateObjectInArray} from '../utils/object-helpers'
 
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
@@ -24,22 +25,18 @@ const usersReducer = (state = initialState, action) => {
         case FOLLOW:
             return {
                 ...state,
-                users: state.users.map(user => {
+                users: updateObjectInArray(state.users, action.userId, 'id', {followed: true}) 
+/*                  users: state.users.map(user => {
                     if (user.id === action.userId) {
                         return {...user, followed: true}
                     }
                     return user;
-                })
+                })  - вынес в object-helpers */
             }
         case UNFOLLOW:
             return {
                 ...state,
-                users: state.users.map(user => {
-                    if (user.id === action.userId) {
-                        return {...user, followed: false}
-                    }
-                    return user;
-                })
+                users: updateObjectInArray(state.users, action.userId, 'id', {followed: false})
             }
         case SETUSERS: {
             return {...state, users: action.users}
@@ -112,14 +109,5 @@ export const unfollow = (userId) => {
         followUnfollowFlow(dispatch, userId, usersAPI.unfollowUser.bind(usersAPI), unfollowSuccess)
     }
 }
-
-/* export const unfollow = (userId) => {
-    return async (dispatch) => {
-        dispatch(toggleIsFollowingInProgress(true, userId))
-        let data = usersAPI.unfollowUser(userId)
-            if (data.resultCode === 0) {dispatch(unfollowSuccess(userId))};
-            dispatch(toggleIsFollowingInProgress(false, userId));
-    }
-} */
 
 export default usersReducer;
