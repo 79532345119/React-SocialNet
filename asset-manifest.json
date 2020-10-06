@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/React-SocialNet/static/css/main.438b8eb5.chunk.css",
+    "main.js": "/React-SocialNet/static/js/main.4b8ecde1.chunk.js",
+    "main.js.map": "/React-SocialNet/static/js/main.4b8ecde1.chunk.js.map",
+    "runtime-main.js": "/React-SocialNet/static/js/runtime-main.6ce0249a.js",
+    "runtime-main.js.map": "/React-SocialNet/static/js/runtime-main.6ce0249a.js.map",
+    "static/js/2.53f1ead9.chunk.js": "/React-SocialNet/static/js/2.53f1ead9.chunk.js",
+    "static/js/2.53f1ead9.chunk.js.map": "/React-SocialNet/static/js/2.53f1ead9.chunk.js.map",
+    "static/css/3.535e34ee.chunk.css": "/React-SocialNet/static/css/3.535e34ee.chunk.css",
+    "static/js/3.3cdb530d.chunk.js": "/React-SocialNet/static/js/3.3cdb530d.chunk.js",
+    "static/js/3.3cdb530d.chunk.js.map": "/React-SocialNet/static/js/3.3cdb530d.chunk.js.map",
+    "index.html": "/React-SocialNet/index.html",
+    "precache-manifest.b4728656056984b58dfc870de2863cfb.js": "/React-SocialNet/precache-manifest.b4728656056984b58dfc870de2863cfb.js",
+    "service-worker.js": "/React-SocialNet/service-worker.js",
+    "static/css/3.535e34ee.chunk.css.map": "/React-SocialNet/static/css/3.535e34ee.chunk.css.map",
+    "static/css/main.438b8eb5.chunk.css.map": "/React-SocialNet/static/css/main.438b8eb5.chunk.css.map",
+    "static/js/2.53f1ead9.chunk.js.LICENSE.txt": "/React-SocialNet/static/js/2.53f1ead9.chunk.js.LICENSE.txt",
+    "static/media/Ripple-1s-200px.svg": "/React-SocialNet/static/media/Ripple-1s-200px.a80c5d39.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ce0249a.js",
+    "static/js/2.53f1ead9.chunk.js",
+    "static/css/main.438b8eb5.chunk.css",
+    "static/js/main.4b8ecde1.chunk.js"
+  ]
+}
