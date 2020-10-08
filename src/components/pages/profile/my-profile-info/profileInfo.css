@@ -9,7 +9,11 @@
     .userPhoto {
 
         grid-row: 1/3;
-        }
+    }
+
+    .userPhoto img {
+        max-width: 200px
+    }
 
     .userAboutItemName {
         font-weight: 700;
@@ -25,9 +29,10 @@
         margin: 0;
         padding: 0;
         font-weight: 700;
-        text-transform: uppercase;       
+        text-transform: uppercase;
     }
     .userContacts li {
+        padding-left: 5px;
         font-weight: 400;
         text-transform: none;
     }

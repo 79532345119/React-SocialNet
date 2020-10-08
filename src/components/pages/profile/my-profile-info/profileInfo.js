@@ -11,11 +11,17 @@ const ProfileInfo = (props)=>{
     }
 
     const contacts = props.profile.contacts;
+    const onMainPhotoSelected = (e) => {
+        if (e.target.files.length) {
+            props.savePhoto(e.target.files[0])
+            }
+    }
 
     return(
     <div className="profileInfo">
 
         <div className="userPhoto"><img src={props.profile.photos.large ? props.profile.photos.large : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR01mUdp62kN2vyu7FWyXLNKdhJSrjnnHsdfQ&usqp=CAU"alt="my profile logo'} alt="users logo if any" /> </div>
+       
         <div className="userAbout">
             <div className="userAboutItemName">{props.profile.fullName}</div>
             <div className="userAboutItemHeading">About me:</div>
@@ -24,6 +30,7 @@ const ProfileInfo = (props)=>{
             <div className="userAboutItem">{props.profile.lookingForAJobDescription}</div>
         </div>
         <ProfileStatus status = {props.status} updateStatus = {props.updateStatus}/>
+        {props.isOwner || <input type={"file"} onChange={onMainPhotoSelected}/>}
         <ul className="userContacts"> Contacts:
             <li className="userContactsItem">facebook: {contacts.facebook}</li>
             <li className="userContactsItem">website: {contacts.website}</li>
