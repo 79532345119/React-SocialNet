@@ -30,7 +30,7 @@ const ProfileInfo = (props)=>{
             <div className="userAboutItem">{props.profile.lookingForAJobDescription}</div>
         </div>
         <ProfileStatus status = {props.status} updateStatus = {props.updateStatus}/>
-        {props.isOwner || <input type={"file"} onChange={onMainPhotoSelected}/>}
+        {props.isOwner || <input className='savePhoto' type={'file'} onChange={onMainPhotoSelected}/>}
         <ul className="userContacts"> Contacts:
             <li className="userContactsItem">facebook: {contacts.facebook}</li>
             <li className="userContactsItem">website: {contacts.website}</li>

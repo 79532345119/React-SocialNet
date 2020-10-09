@@ -36,3 +36,7 @@
         font-weight: 400;
         text-transform: none;
     }
+    .savePhoto {
+        color: palegoldenrod;
+        justify-self: center;
+    }
