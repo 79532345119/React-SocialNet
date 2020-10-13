@@ -24,18 +24,6 @@ const authReducer = (state = initialState, action) => {
 }
 export const setAuthUserData = (userId, email, login, isAuth) => ({ type: SET_USER_DATA, data: {userId, email, login, isAuth} });
 
-/* export const authorizeMe = () => {
-    return (dispatch) => {
-        authAPI.me()
-            .then(data => {
-                if (data.resultCode === 0) {
-                    let {id, email, login} = data.data;
-                    dispatch(setAuthUserData(id, email, login, true));
-                }
-            })
-    }
-} */
-
 export const authorizeMe = () => 
     async (dispatch) => {
         let data = await authAPI.me();
