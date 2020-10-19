@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/React-SocialNet/static/css/main.438b8eb5.chunk.css",
-    "main.js": "/React-SocialNet/static/js/main.f971e65e.chunk.js",
-    "main.js.map": "/React-SocialNet/static/js/main.f971e65e.chunk.js.map",
-    "runtime-main.js": "/React-SocialNet/static/js/runtime-main.4ad86ae9.js",
-    "runtime-main.js.map": "/React-SocialNet/static/js/runtime-main.4ad86ae9.js.map",
-    "static/js/2.4b2ed023.chunk.js": "/React-SocialNet/static/js/2.4b2ed023.chunk.js",
-    "static/js/2.4b2ed023.chunk.js.map": "/React-SocialNet/static/js/2.4b2ed023.chunk.js.map",
+    "main.css": "/React-SocialNet/static/css/main.ce1d4477.chunk.css",
+    "main.js": "/React-SocialNet/static/js/main.aa368df6.chunk.js",
+    "main.js.map": "/React-SocialNet/static/js/main.aa368df6.chunk.js.map",
+    "runtime-main.js": "/React-SocialNet/static/js/runtime-main.068a0388.js",
+    "runtime-main.js.map": "/React-SocialNet/static/js/runtime-main.068a0388.js.map",
+    "static/js/2.f5b76bd8.chunk.js": "/React-SocialNet/static/js/2.f5b76bd8.chunk.js",
+    "static/js/2.f5b76bd8.chunk.js.map": "/React-SocialNet/static/js/2.f5b76bd8.chunk.js.map",
     "static/css/3.535e34ee.chunk.css": "/React-SocialNet/static/css/3.535e34ee.chunk.css",
-    "static/js/3.c74ad9ea.chunk.js": "/React-SocialNet/static/js/3.c74ad9ea.chunk.js",
-    "static/js/3.c74ad9ea.chunk.js.map": "/React-SocialNet/static/js/3.c74ad9ea.chunk.js.map",
+    "static/js/3.8aed1f30.chunk.js": "/React-SocialNet/static/js/3.8aed1f30.chunk.js",
+    "static/js/3.8aed1f30.chunk.js.map": "/React-SocialNet/static/js/3.8aed1f30.chunk.js.map",
     "index.html": "/React-SocialNet/index.html",
-    "precache-manifest.807bcc00fe7ccb1d1712169a8e97ab5d.js": "/React-SocialNet/precache-manifest.807bcc00fe7ccb1d1712169a8e97ab5d.js",
+    "precache-manifest.7f8ce510bb2da44c4013dd8cdb761f07.js": "/React-SocialNet/precache-manifest.7f8ce510bb2da44c4013dd8cdb761f07.js",
     "service-worker.js": "/React-SocialNet/service-worker.js",
     "static/css/3.535e34ee.chunk.css.map": "/React-SocialNet/static/css/3.535e34ee.chunk.css.map",
-    "static/css/main.438b8eb5.chunk.css.map": "/React-SocialNet/static/css/main.438b8eb5.chunk.css.map",
-    "static/js/2.4b2ed023.chunk.js.LICENSE.txt": "/React-SocialNet/static/js/2.4b2ed023.chunk.js.LICENSE.txt",
+    "static/css/main.ce1d4477.chunk.css.map": "/React-SocialNet/static/css/main.ce1d4477.chunk.css.map",
+    "static/js/2.f5b76bd8.chunk.js.LICENSE.txt": "/React-SocialNet/static/js/2.f5b76bd8.chunk.js.LICENSE.txt",
     "static/media/Ripple-1s-200px.svg": "/React-SocialNet/static/media/Ripple-1s-200px.a80c5d39.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4ad86ae9.js",
-    "static/js/2.4b2ed023.chunk.js",
-    "static/css/main.438b8eb5.chunk.css",
-    "static/js/main.f971e65e.chunk.js"
+    "static/js/runtime-main.068a0388.js",
+    "static/js/2.f5b76bd8.chunk.js",
+    "static/css/main.ce1d4477.chunk.css",
+    "static/js/main.aa368df6.chunk.js"
   ]
 }
