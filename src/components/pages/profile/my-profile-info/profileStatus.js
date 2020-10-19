@@ -1,4 +1,5 @@
 import React from 'react';
+import './profileStatus.css'
 
 class ProfileStatus extends React.Component {
 
@@ -30,7 +31,7 @@ class ProfileStatus extends React.Component {
    
     render() {
         return (
-            <div>
+            <div className='status'>
                 {!this.state.editMode && 
                     <div>
                         <span onDoubleClick={this.activateEditMode.bind(this)} >{this.props.status || 'too lazy to add status. Or Young?'}</span>
@@ -39,7 +40,7 @@ class ProfileStatus extends React.Component {
 
                 {this.state.editMode &&
                 <div>
-                    <input onChange={this.onStatusChange} autoFocus={true} onBlur={this.deactivateEditMode.bind(this)} value = {this.state.status}/>
+                    <input className='status' onChange={this.onStatusChange} autoFocus={true} onBlur={this.deactivateEditMode.bind(this)} value = {this.state.status}/>
                 </div>
                 }
             </div>
