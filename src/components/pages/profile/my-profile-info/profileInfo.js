@@ -19,8 +19,7 @@ const ProfileInfo = (props)=>{
             }
         }
     const onSubmit = (formData) => {
-        console.log(formData)
-        props.saveProfile(formData).then(()=>{setEditMode(false)})
+            props.saveProfile(formData).then(()=>{setEditMode(false)})
         }
 
     return(
@@ -29,7 +28,7 @@ const ProfileInfo = (props)=>{
 
         <div className="userPhoto"><img src={props.profile.photos.large ? props.profile.photos.large : 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR01mUdp62kN2vyu7FWyXLNKdhJSrjnnHsdfQ&usqp=CAU"alt="my profile logo'} alt="users logo if any" /> </div>
 
-        <ProfileStatus status = {props.status} updateStatus = {props.updateStatus}/>
+        <ProfileStatus status = {props.status} updateStatus = {props.updateStatus} isOwner = {props.isOwner}/>
         {props.isOwner && <input className='savePhoto' type={'file'} onChange={onMainPhotoSelected}/>}
         {editMode 
             ? <ProfileDataForm initialValues={props.profile} profile={props.profile} onSubmit = {onSubmit}/> 

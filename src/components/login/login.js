@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import {login} from '../../data/auth-reducer';
 import { Redirect } from 'react-router-dom';
 import style from '../common/formsControls/formsControls.module.css'
-import {createField, Input, Textarea} from '../common/formsControls/formsControls'
+import {createField, Input} from '../common/formsControls/formsControls'
 
 
 const LoginForm = ({handleSubmit, error, captchaUrl}) => {

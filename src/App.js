@@ -1,7 +1,8 @@
 import React, {Suspense} from 'react';
-import {Route} from 'react-router-dom';
+import {Redirect, Route, Switch} from 'react-router-dom';
 
 import './App.css';
+import './utils/styleNone.css'
 import HeaderContainer from './components/header/headerContainer';
 import SideBar from './components/side-bar/sideBar';
 import ProfileContainer from './components/pages/profile/profileContainer';
@@ -21,31 +22,35 @@ const App = (props) => {
       <div className="app-wrapper">
           <HeaderContainer/>
           <SideBar/>
-          <Route path="/profile/:userId?" 
-                 render={()=><ProfileContainer 
-                     store={props.store}/>
-              }/>
-          <Route path="/messages" 
-                 render={()=> {
-                     return (<div>
-                              <Suspense fallback={<div>Загрузка...</div>}>
-                                <MessagesContainer store={props.store}  />
-                              </Suspense>
-                            </div>);
-                 } 
-              }/>
-          <Route path="/news" 
-                 component={News}/>
-          <Route path="/music" 
-                 component={Music}/>
-          <Route path="/settings" 
-                 component={Settings}/>
-          <Route path="/users" 
-                 render = {()=><UsersContainer
-                     store={props.store}
-                     />}/>
-          <Route path="/login"
-                 component={Login}/>
+          <Switch>
+              <Route exact path="/"
+                     render={()=> <Redirect to={"/profile"} /> } />
+              <Route path="/profile/:userId?" 
+                     render={()=><ProfileContainer 
+                         store={props.store}/>
+                  }/>
+              <Route path="/messages" 
+                     render={()=> {
+                         return (<div>
+                                  <Suspense fallback={<div>Загрузка...</div>}>
+                                    <MessagesContainer store={props.store}  />
+                                  </Suspense>
+                                </div>);
+                     } 
+                  }/>
+              <Route path="/news" 
+                     component={News}/>
+              <Route path="/music" 
+                     component={Music}/>
+              <Route path="/settings" 
+                     component={Settings}/>
+              <Route path="/users" 
+                     render = {()=><UsersContainer
+                         store={props.store}
+                         />}/>
+              <Route path="/login"
+                     component={Login}/>
+           </Switch>
 
       </div> 
   );
