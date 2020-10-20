@@ -1,3 +1,9 @@
-.postItem img {
-    width: 100px;
+.postItem {
+    border: solid blue 2px;
+    border-radius: 5px;
+    margin: 5px;
+    min-height: 40px;
+    min-width: 200px;
+    display: flex;
+    align-items: center;  
 }

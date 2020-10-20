@@ -8,7 +8,7 @@
     padding: 10px;
 }
 
-.dialogs__item.active {
+.dialogs__item .active {
     font-weight: 700;
     color: blue;
 }
