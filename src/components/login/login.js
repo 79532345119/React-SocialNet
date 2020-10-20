@@ -28,7 +28,7 @@ const LoginForm = ({handleSubmit, error, captchaUrl}) => {
                 {error}
             </div>}
             <div>
-                <button>Login</button>
+                <button className={style.btn}>Login</button>
             </div>
         </form>
     )}

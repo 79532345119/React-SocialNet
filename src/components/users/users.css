@@ -33,3 +33,7 @@
     grid-template-columns: 1fr 10fr;
     margin-right: 5rem;
 }
+.btn-sm {
+    border: 2px solid blue;
+    border-radius: 3px;
+}

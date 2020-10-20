@@ -10,6 +10,13 @@
   grid-gap: 10px; 
   }
 
+  .btn {
+    border-radius: 5px;
+    background-color: rgb(70, 226, 70);
+    margin: 5px;
+    min-height: 40px;
+    min-width: 200px;
+}
 
 
 

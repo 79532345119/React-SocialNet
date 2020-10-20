@@ -4,9 +4,7 @@ let initialState = {
     messages: 
     [
         {'id':'1', 'message':'Hello world'},
-        {'id':'2', 'message':'This is second message'}, 
-        {'id':'3', 'message':'This is third message'}, 
-        {'id':'4', 'message':'I am realy cool!'},
+        {'id':'2', 'message':'К сожалению сервер не поддерживает отправку и получение сообщений.'}, 
         ], 
   
     dialogs: 
