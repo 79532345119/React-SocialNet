@@ -3,8 +3,8 @@ import './music.css';
 
 const Music = ()=>{
     return (
-        <div>
-            My music here
+        <div className='unavailable'>
+            Сервис временно недоступен
         </div>
     )
 }

@@ -12,12 +12,9 @@ const SideBar = ()=> {
                 <NavLink to="/messages">Messages</NavLink>
             </div>
             <div className="sideBar__item">
-                <NavLink to="/news">News</NavLink></div>
+                <NavLink to="/myFriends">My friends</NavLink></div>
             <div className="sideBar__item">
                 <NavLink to="/music">Music</NavLink></div>
-            <div className="sideBar__item">
-                <NavLink to="settings">Settings</NavLink>
-            </div>
             <div className="sideBar__item">
                 <NavLink to="/users">Users</NavLink>
             </div>

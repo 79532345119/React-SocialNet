@@ -22,7 +22,7 @@ export const usersAPI ={
     getProfile(userId) {
         console.warn('Old method. PLS use profileAPI object')
         return profileAPI.getProfile(userId)
-    }
+    },
 }
 
 export const profileAPI ={

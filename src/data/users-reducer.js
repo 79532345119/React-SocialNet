@@ -57,6 +57,7 @@ const usersReducer = (state = initialState, action) => {
                 : state.isFollowingInProgress.filter(id => id !== action.userId) }
         }
 
+
         default:
             return state;
     }
@@ -109,5 +110,7 @@ export const unfollow = (userId) => {
         followUnfollowFlow(dispatch, userId, usersAPI.unfollowUser.bind(usersAPI), unfollowSuccess)
     }
 }
+
+
 
 export default usersReducer;

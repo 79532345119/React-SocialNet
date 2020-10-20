@@ -6,7 +6,6 @@ import './utils/styleNone.css'
 import HeaderContainer from './components/header/headerContainer';
 import SideBar from './components/side-bar/sideBar';
 import ProfileContainer from './components/pages/profile/profileContainer';
-import News from './components/pages/news/news';
 import Music from './components/pages/music/music';
 import Settings from './components/pages/settings/settings';
 import UsersContainer from './components/users/usersContainer';
@@ -38,12 +37,13 @@ const App = (props) => {
                                 </div>);
                      } 
                   }/>
-              <Route path="/news" 
-                     component={News}/>
+              <Route path="/myFriends" 
+                     render = {()=><UsersContainer
+                         store={props.store} isShowFollowed={true}
+                         />}/>
               <Route path="/music" 
                      component={Music}/>
-              <Route path="/settings" 
-                     component={Settings}/>
+
               <Route path="/users" 
                      render = {()=><UsersContainer
                          store={props.store}
